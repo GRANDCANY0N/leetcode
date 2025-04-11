@@ -3,7 +3,10 @@ package dailycode;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class Candy_135 {
+/**
+ * @author Canyon
+ */
+public class Candy135 {
 
     public static int candy(int[] ratings) {
         int len = ratings.length;
