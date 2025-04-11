@@ -1,4 +1,4 @@
-package dailycode;
+package dailyCode;
 
 public class addDigits_258 {
     public int addDigits(int num) {
