@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class scoreOfString_3110 {
     public int scoreOfString(String s){

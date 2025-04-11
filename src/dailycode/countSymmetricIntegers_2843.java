@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class countSymmetricIntegers_2843 {
     /**

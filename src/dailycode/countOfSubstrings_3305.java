@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 import java.util.Arrays;
 

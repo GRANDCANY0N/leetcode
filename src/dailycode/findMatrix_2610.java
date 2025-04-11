@@ -1,7 +1,6 @@
-package dailyCode;
+package dailycode;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class findMatrix_2610 {
     public List<List<Integer>> findMatrix(int[] nums) {

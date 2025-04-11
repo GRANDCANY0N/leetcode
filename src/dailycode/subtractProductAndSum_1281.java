@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class subtractProductAndSum_1281 {
     public int subtractProductAndSum(int n){

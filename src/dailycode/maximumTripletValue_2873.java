@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class maximumTripletValue_2873 {
     public long maximumTripletValue(int[] nums) {

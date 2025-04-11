@@ -1,8 +1,6 @@
-package dailyCode;
+package dailycode;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 public class longestConsecutive_128 {
     public int longestConsecutive(int[] nums) {

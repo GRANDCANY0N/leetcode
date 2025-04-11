@@ -1,8 +1,7 @@
-package dailyCode;
+package dailycode;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Set;
 
 public class numIdenticalPairs_1512 {
     public static int numIdenticalPairs(int[] nums) {

@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class diagonalPrime_2614 {
     public int diagonalPrime(int[][] nums){

@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class maxScore_1422 {
     public int maxScore(String s) {

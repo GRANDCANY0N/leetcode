@@ -1,4 +1,4 @@
-package dailyCode;
+package dailycode;
 
 public class subsetXORSum_1863 {
     public int subsetXORSum(int[] nums) {
