@@ -1,4 +1,4 @@
-package slidingwindow;
+package slidingwindowsanddoublepointers.slidingwindow;
 
 public class maxVowels_1456 {
     /**
