@@ -3,10 +3,11 @@ package slidingwindowsanddoublepointers.varsliwin.longestormaximum;
 /**
  * @author Canyon
  */
+/**
+ * MGZ TODO 2025/5/12：待优化，将两个循环转为一个
+ */
 public class MaxConsecutiveAnswers2024 {
-    /**
-     * MGZ TODO 2025/5/12：待优化，将两个循环转为一个
-     */
+
     /**
      * 分别计算T和F的最长字串，使用sum记录长度，移动left
      * @param answerKey 条件字符串
