@@ -2,8 +2,6 @@ package slidingwindowsanddoublepointers.varsliwin.longestormaximum;
 
 /**
  * @author Canyon
- */
-/**
  * MGZ TODO 2025/5/12：待优化，将两个循环转为一个
  */
 public class MaxConsecutiveAnswers2024 {
