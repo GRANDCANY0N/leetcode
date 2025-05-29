@@ -1,4 +1,4 @@
-package slidingwindowsanddoublepointers.varsliwin.shortestorminimum;
+package slidingwindowsanddoublepointers.varsliwin.numberofsubarrays.longer;
 
 import java.util.HashMap;
 import java.util.HashSet;
