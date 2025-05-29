@@ -1,4 +1,4 @@
-package slidingwindowsanddoublepointers.varsliwin.numberofsubarrays.longer;
+package slidingwindowsanddoublepointers.varsliwin.shortestorminimum;
 
 /**
  * @author Canyon
