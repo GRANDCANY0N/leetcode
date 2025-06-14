@@ -1,5 +1,6 @@
 package binarysearch.search.base;
 
+import binarysearch.search.helper.BinarySearchHelper;
 /**
  * 考虑四种情况 >= > < <= 都考虑target存在于数组中的情况
  * 大于等于target>= 此时索引right就是等于target start = lower_bound(nums,target)
@@ -39,11 +40,12 @@ public class SearchRange34 {
      * @return {@link int[] }
      */
     public int[] searchRange(int[] nums, int target) {
-        int start = lower_bound(nums,target);
+        BinarySearchHelper binarySearchHelper = new BinarySearchHelper();
+        int start = binarySearchHelper.lower_bound(nums,target);
         if(start == nums.length || nums[start] != target){
             return new int[]{-1,-1};
         }
-        int end = lower_bound(nums,target+1) - 1;
+        int end = binarySearchHelper.lower_bound(nums,target+1) - 1;
         return new int[]{start,end};
     }
 }
