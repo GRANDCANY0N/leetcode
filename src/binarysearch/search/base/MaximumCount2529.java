@@ -4,7 +4,7 @@ import binarysearch.search.helper.GenericBinarySearchHelper;
 
 import java.util.Arrays;
 
-public class MaximumCount2529 extends GenericBinarySearchHelper<Integer> {
+public class MaximumCount2529 extends GenericBinarySearchHelper<Integer,Integer> {
     /**
      * 重写比较方法，改为Integer类型的比较
      */

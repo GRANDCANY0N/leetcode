@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * @author Canyon
  */
-public class AnswerQueries2389 extends GenericBinarySearchHelper<Integer> {
+public class AnswerQueries2389 extends GenericBinarySearchHelper<Integer,Integer> {
     /**
      * 由于是泛型，所以具体的继承要重写为对应的类型比较
      *

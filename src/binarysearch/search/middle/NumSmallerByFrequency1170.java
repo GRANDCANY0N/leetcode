@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author canyon
  * @date 2025/06/19
  */
-public class NumSmallerByFrequency1170 extends GenericBinarySearchHelper<Integer> {
+public class NumSmallerByFrequency1170 extends GenericBinarySearchHelper<Integer,Integer> {
     @Override
     protected boolean compare(Integer value, Integer target) {
         return value < target;

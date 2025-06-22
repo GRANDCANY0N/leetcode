@@ -4,7 +4,7 @@ import binarysearch.search.helper.GenericBinarySearchHelper;
 
 import java.util.Arrays;
 
-public class FindTheDistanceValue1385 extends GenericBinarySearchHelper<Integer> {
+public class FindTheDistanceValue1385 extends GenericBinarySearchHelper<Integer,Integer> {
     @Override
     protected boolean compare(Integer value, Integer target) {
         return value < target;

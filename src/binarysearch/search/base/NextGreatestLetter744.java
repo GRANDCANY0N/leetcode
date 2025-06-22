@@ -3,7 +3,7 @@ package binarysearch.search.base;
 import binarysearch.search.helper.GenericBinarySearchHelper;
 
 
-public class NextGreatestLetter744 extends GenericBinarySearchHelper<Character> {
+public class NextGreatestLetter744 extends GenericBinarySearchHelper<Character,Character> {
     @Override
     protected boolean compare(Character value, Character target) {
         return value < target;
