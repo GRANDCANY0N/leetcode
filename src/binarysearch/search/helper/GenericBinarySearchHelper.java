@@ -13,7 +13,7 @@ public abstract class GenericBinarySearchHelper<T,U> {
         int left = -1;
         int right = array.length;
         while(left+1 < right){
-            int mid = left + (right -left) / 2;
+            int mid = (right+left)>>>1;
             if(compare(array[mid],target)){
                 left = mid;
             }else{
