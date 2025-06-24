@@ -12,6 +12,11 @@ import java.util.TreeMap;
  * 触发snap方法时，需要保存当前发生过的所有变化并保存snapId
  * 之后根据snapId和索引找到在当时发生snap方法的索引对应的值
  * 解题思路一：
+ * 首先初始化，HashMap存储的是每个值的索引和对应的treeMap
+ * treeMap存储的是当前索引每次快照的id和值
+ * 例如初始化<0, <[0,0]>> 第一次set之后<0, <[0,5]>> 第一次快照之后再set <0, <[0,5],[1,6]>>
+ * 要查找某个索引某次快照对应的值 只需要根据hashMap的键查找对应的treeMap，之后snapId作为target，二分查找小于等于target
+ * 为什么是小于等于，因为treeMap只更新变化的值，如果一个索引的treeMap没有此次snapId，说明从最近的一次snapId之后就没有更新过
  */
 public class SnapshotArray1146 {
     private int snap_id = 0;
