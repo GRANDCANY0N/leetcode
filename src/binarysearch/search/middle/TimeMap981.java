@@ -3,36 +3,55 @@ package binarysearch.search.middle;
 
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-import java.util.TreeMap;
+import java.util.List;
 
+/**
+ * @author Canyon
+ * @date 2025/06/25
+ */
 public class TimeMap981  {
 
+    private static class Entry {
+        int timestamp;
+        String value;
 
-    private final HashMap<String, TreeMap<Integer,String>> map = new HashMap<>();
+        Entry(int timestamp, String value) {
+            this.timestamp = timestamp;
+            this.value = value;
+        }
+    }
+    private final HashMap<String, List<Entry>> map = new HashMap<>();
 
     public TimeMap981() {
 
     }
 
     public void set(String key, String value, int timestamp) {
-        if (!map.containsKey(key)) {
-            TreeMap<Integer, String> innerMap = new TreeMap<>();
-            innerMap.put(timestamp, value);
-            map.put(key, innerMap);
-        }else {
-            map.get(key).put(timestamp, value);
-        }
+        map.computeIfAbsent(key,k -> new ArrayList<>()).add(new Entry(timestamp, value));
     }
 
     public String get(String key, int timestamp) {
-        if(!map.containsKey(key)) {
+        if(!map.containsKey(key)){
             return "";
         }
-        TreeMap<Integer, String> innerMap = map.get(key);
-        HashMap.Entry<Integer, String> entry = innerMap.floorEntry(timestamp);
-        return entry != null ? entry.getValue() : "";
+        int index = lowerBound(map.get(key),timestamp+1)-1;
+        return index < 0 ? "":map.get(key).get(index).value;
+    }
 
+    public int lowerBound(List<Entry> list, int target){
+        int left = -1;
+        int right = list.size();
+        while (left + 1 < right) {
+            int mid = (left + right) >>>1;
+            if(list.get(mid).timestamp<target){
+                left = mid;
+            }else {
+                right = mid;
+            }
+        }
+        return right;
     }
 }
