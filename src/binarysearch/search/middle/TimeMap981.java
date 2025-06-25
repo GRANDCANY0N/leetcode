@@ -1,16 +1,18 @@
 package binarysearch.search.middle;
 
-
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import java.util.List;
 
 /**
  * @author Canyon
  * @date 2025/06/25
+ * 题目是设计一个基于时间的键值数据结构，该结构可以在不同时间戳存储对应同一个键的多个值，并针对特定时间戳检索键对应的值
+ * 用hashMap记录key，hashMap的value是list记录timestamp和value的元组
+ * java元组需要自己设计，内部类必须是静态，构造元组entry，hashMap的结构是hashMap(key,list(Entry))
+ * 由于timestamp严格递增, 则每个key对应的list在timestamp已经是递增的，考虑对list[0]也就是timestamp进行二分，找到对应的key和timestamp对应的值
+ * 将要查询的timestamp作为target，小于等于target则是最新的更新过的值
+ *
  */
 public class TimeMap981  {
 
@@ -18,6 +20,11 @@ public class TimeMap981  {
         int timestamp;
         String value;
 
+        /**
+         * 构造方法 entry
+         * @param timestamp 时间戳
+         * @param value 值
+         */
         Entry(int timestamp, String value) {
             this.timestamp = timestamp;
             this.value = value;
