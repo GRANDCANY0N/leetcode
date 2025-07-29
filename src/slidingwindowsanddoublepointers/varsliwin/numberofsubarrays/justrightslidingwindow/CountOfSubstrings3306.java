@@ -2,6 +2,10 @@ package slidingwindowsanddoublepointers.varsliwin.numberofsubarrays.justrightsli
 
 import java.util.HashMap;
 
+/**
+ * @author Canyon
+ * @date 2025/07/29
+ */
 public class CountOfSubstrings3306 {
     public long countOfSubstrings(String word, int k) {
         return solution(word,k) - solution(word,k+1);
