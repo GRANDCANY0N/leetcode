@@ -101,5 +101,6 @@ public class MaxPointsInsideSquare3143 {
     public static void main(String[] args) {
         int[][] arr = {{-54,27},{17,39},{26,-57},{-32,-61},{-54,59},{-46,60},{-18,-63},{45,26}};
         System.out.println(new MaxPointsInsideSquare3143().maxPointsInsideSquareTwo(arr,"aebffcee"));
+        System.out.println(new MaxPointsInsideSquare3143().maxPointsInsideSquare(arr,"aebffcee"));
     }
 }
