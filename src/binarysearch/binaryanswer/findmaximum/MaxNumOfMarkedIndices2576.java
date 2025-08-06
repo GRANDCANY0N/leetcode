@@ -2,43 +2,45 @@ package binarysearch.binaryanswer.findmaximum;
 
 import java.util.Arrays;
 
+/**
+ * @author Canyon
+ * @date 2025/07/30
+ */
 public class MaxNumOfMarkedIndices2576 {
-    public boolean check(int[] nums,int mid){
-        int right = nums.length-1;
-        int left = right-1;
-        int ans = 0;
-        while(left>=0){
-            if(nums[right]>=2*nums[left]){
-                right --;
-                ans += 2;
-            }
-            left--;
-        }
-        return ans >= mid;
-    }
-
+    /**
+     * 由于需要两两配队，左闭右开情况下，将nums排序
+     * left设为最少的配对数0，right设为最多的配队数+1，最多就是nums.length/2+1
+     * @param nums 整数数组
+     * @return int 满足 2 * nums[i] <= nums[j]的最多下标
+     */
     public int maxNumOfMarkedIndices(int[] nums) {
         Arrays.sort(nums);
         int left = 0;
-        int right;
-        if((nums.length&1)==1){
-            right = nums.length;
-        }else {
-            right = nums.length+1;
-        }
-        while (left+1 < right) {
-            int mid = (left+right)>>>1;
-            if(check(nums,mid)){
+        int right = (nums.length)/2+1;
+        while(left+1<right){
+            int mid = (left+right)>>1;
+            if(check(mid,nums)){
                 left = mid;
             }else {
                 right = mid;
             }
         }
-        return left;
+        return left*2;
     }
 
-    public static void main(String[] args) {
-        int[] nums = {57,40,57,51,90,51,68,100,24,39,11,85,2,22,67,29,74,82,10,96,14,35,25,76,26,54,29,44,63,49,73,50,95,89,43,62,24,88,88,36,6,16,14,2,42,42,60,25,4,58,23,22,27,26,3,79,64,20,92};
-        System.out.println(new MaxNumOfMarkedIndices2576().maxNumOfMarkedIndices(nums));
+    /**
+     * 在顺序数组下，只需要考虑[0,mid)和[nums.length-mid,nums.length)的索引是否匹配
+     * 因此一旦出现nums[i]*2 > nums[nums.length-mid+i]则返回false，否则全部符合则返回true
+     * @param mid 二分给定的配对数
+     * @param nums 整数数组
+     * @return boolean 判断是否有mid对符合条件
+     */
+    public boolean check(int mid, int[] nums){
+        for (int i = 0; i < mid; i++) {
+            if(nums[i]*2 > nums[nums.length-mid+i]){
+                return false;
+            }
+        }
+        return true;
     }
 }
